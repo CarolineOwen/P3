@@ -12,4 +12,10 @@ header {
   background-color: pink;
   color: blue;
 }
+
+.image_menu {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 15%;
+}
 /*# sourceMappingURL=style.css.map */
