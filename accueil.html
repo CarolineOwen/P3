@@ -22,8 +22,8 @@
       <img class="logo" src="./images/logo/ohmyfood.png" alt="logo ohmyfood" />
     </header>
     <!-- LOCATION INPUT -->
-    <form method="post">
-      <i class="fa-solid fa-location-dot"></i
+    <form class="belleville" method="post">
+      <i class="location fa-solid fa-location-dot"></i
       ><input
         id="search_location"
         type="text"
@@ -43,85 +43,119 @@
 
       <div class="buttons_form">
         <p class="number">1</p>
-        <i class="fa-solid fa-mobile-screen"></i
+        <i class="icon fa-solid fa-mobile-screen"></i
         ><button class="button_name">Choisissez un restaurant</button>
       </div>
       <div class="buttons_form">
         <p class="number">2</p>
-        <i class="fa-solid fa-list"></i
+        <i class="icon fa-solid fa-list"></i
         ><button class="button_name">Composez votre menu</button>
       </div>
       <div class="buttons_form">
         <p class="number">3</p>
-        <i class="fa-solid fa-store"></i
+        <i class="icon fa-solid fa-store"></i
         ><button class="button_name">Dégustez au restaurant</button>
       </div>
     </section>
     <!-- MENUS -->
     <section class="menus">
-        <h2>Restaurants</h2>
-        <div class="all_menus">
-            <!-- first menu -->
-            <article class="menu_design">
-                <a href="#">
-                    <img class="image_menu" src="./images/restaurants/la_palette_du_gout.jpg" alt="Restaurant la palette du goût"/>
-                    <div class="other_information">
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div class="heart">
-                        <button class="heart_button"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </a>
-            </article>
-            <!-- second menu -->
-            <article class="menu_design">
-                <a href="#">
-                    <img class="image_menu" src="./images/restaurants/la_note_enchantee.jpg" alt="Restaurant la note enchantée"/>
-                    <div class="other_information">
-                        <h3>La note enchantée</h3>
-                        <p>Charonne</p>
-                    </div>
-                    <div class="heart">
-                        <button class="heart_button"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </a>
-            </article>
-            <!-- third menu -->
-            <article class="menu_design">
-                <a href="#">
-                    <img class="image_menu" src="./images/restaurants/a_la_francaise.jpg" alt="Restaurant A la française"/>
-                    <div class="other_information">
-                        <h3>À la française</h3>
-                        <p>Cité rouge</p>
-                    </div>
-                    <div class="heart">
-                        <button class="heart_button"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </a>
-            </article>
-            <!-- third menu -->
-            <article class="menu_design">
-                <a href="#">
-                    <img class="image_menu" src="./images/restaurants/le_delice_des_sens.jpg" alt="Restaurant Le délice des sens"/>
-                    <div class="other_information">
-                        <h3>Le délice des sens</h3>
-                        <p>Folie-Méricourt</p>
-                    </div>
-                    <div class="heart">
-                        <button class="heart_button"><i class="fa-regular fa-heart"></i></button>
-                    </div>
-                </a>
-            </article>
-        </div>
+      <h2>Restaurants</h2>
+      <div>
+        <!-- first menu -->
+
+        <article class="menu_design">
+          <img
+            class="image_menu"
+            src="./images/restaurants/la_palette_du_gout.jpg"
+            alt="Restaurant la palette du goût"
+          />
+          <div class="other_info_and_heart">
+            <div class="other_information">
+              <h3>La palette du goût</h3>
+              <p>Ménilmontant</p>
+            </div>
+            <div class="heart">
+              <button class="heart_button">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- second menu -->
+        <article class="menu_design">
+          <img
+            class="image_menu"
+            src="./images/restaurants/la_note_enchantee.jpg"
+            alt="Restaurant la note enchantée"
+          />
+          <div class="other_info_and_heart">
+            <div class="other_information">
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+            </div>
+            <div class="heart">
+              <button class="heart_button">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- third menu -->
+        <article class="menu_design">
+          <img
+            class="image_menu"
+            src="./images/restaurants/a_la_francaise.jpg"
+            alt="Restaurant A la française"
+          />
+          <div class="other_info_and_heart">
+            <div class="other_information">
+              <h3>À la française</h3>
+              <p>Cité rouge</p>
+            </div>
+            <div class="heart">
+              <button class="heart_button">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+        <!-- third menu -->
+        <article class="menu_design">
+          <img
+            class="image_menu"
+            src="./images/restaurants/le_delice_des_sens.jpg"
+            alt="Restaurant Le délice des sens"
+          />
+          <div class="other_info_and_heart">
+            <div class="other_information">
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+            </div>
+            <div class="heart">
+              <button class="heart_button">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer>
-        <img class="logo" src="./images/logo/ohmyfood.png" alt="logo ohmyfood" />
-        <span><i class="fa-solid fa-utensils"></i></span><p>Proposer un restaurant</p>
-        <i class="fa-solid fa-handshake-angle"></i><p>partenaire</p>
-        <p>Mentions légales</p>
-        <p><a href="mailto:votrenom@bidule.com">Contact</a></p>
+        <div class="footer_elements">
+      <p class="p_footer">ohmyfood</p>
+      <div class="icon_footer">
+        <i class="fa-solid fa-utensils"></i>
+        <p class="p_icon">Proposer un restaurant</p>
+      </div>
+      <div class="icon_footer">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <p class="p_icon">Partenaire</p>
+      </div>
+      <p class="p_icon">Mentions légales</p>
+      <p class="p_icon"><a href="mailto:votrenom@bidule.com">Contact</a></p>
+    </div>
     </footer>
   </body>
 </html>
