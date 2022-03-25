@@ -8,27 +8,39 @@ html {
   margin: 0px;
 }
 
-/*HEADER*/
+/*HEADER box-shadow: inset 0px 2px 0px 0px rgb(199, 198, 198)*/
 header {
-  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
   margin: auto;
   padding: 10px;
 }
 
 .logo {
-  width: 100%;
+  height: 30px;
 }
 
 /*LOCATION INPUT*/
 .belleville {
-  background-color: #dbd7d7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e2e2e2;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   border-top: 2px solid #b6b6b6;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #c7c6c6;
-          box-shadow: inset 0px 1px 0px 0px #c7c6c6;
+  -webkit-box-shadow: inset 0px 2px 2px #d3d0d0;
+          box-shadow: inset 0px 2px 2px #d3d0d0;
 }
 
 .location {
@@ -38,7 +50,7 @@ header {
 #search_location {
   background: none;
   border: none;
-  width: 50%;
+  width: 150px;
 }
 
 /*RESTAURANT BUTTON*/
@@ -57,8 +69,12 @@ h1 {
 .restaurant_explorer {
   border-radius: 20px;
   padding: 10px;
+  border: none;
   background-image: linear-gradient(171deg, #ff79da, #9356dc);
   color: white;
+  -webkit-box-shadow: 3px 3px 3px #dfdddd;
+          box-shadow: 3px 3px 3px #dfdddd;
+  cursor: pointer;
 }
 
 /*CHOICE BUTTON*/
@@ -85,6 +101,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
   background-color: #f1eeee;
   width: 90%;
   border-radius: 15px;
@@ -128,10 +145,6 @@ h2 {
   color: gray;
 }
 
-.icon:hover {
-  color: #9356dc;
-}
-
 .button_name {
   background: none;
   border: none;
@@ -148,6 +161,22 @@ h2 {
   margin: auto;
   padding: 20px;
   background-color: #f1eeee;
+}
+
+.image_new {
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  font-weight: bold;
+  z-index: 1;
+  top: 20px;
+  right: 30px;
+  background-color: #99e2d0;
+  padding: 5px;
+  border-radius: 5px;
+  color: #278870;
 }
 
 .image_menu {

@@ -9,34 +9,34 @@ html {
   margin: 0px;
 }
 
-
-
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 
-/*HEADER*/
+/*HEADER box-shadow: inset 0px 2px 0px 0px rgb(199, 198, 198)*/
 
-header {
-  width: 60%;
+header {display: flex;
+  justify-content: center;
+  width: 90%;
   margin: auto;
-  padding:10px;
+  padding: 10px;
 }
 
 .logo {
-  width: 100%;
+ height:30px;
 }
 
 /*LOCATION INPUT*/
 
-.belleville {
-  background-color: rgb(219, 215, 215);
+.belleville {display: flex;
+  justify-content: center;
+  background-color: rgb(226, 226, 226);
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  border-top: 2px solid rgb(182, 182, 182,);
-  box-shadow: inset 0px 1px 0px 0px rgb(199, 198, 198);
+  border-top: 2px solid rgb(182, 182, 182);
+  box-shadow: inset 0px 2px 2px rgb(211, 208, 208);
 }
 
 .location {
@@ -46,7 +46,7 @@ header {
 #search_location {
   background: none;
   border: none;
-  width:50%;
+  width: 150px;
 }
 
 /*RESTAURANT BUTTON*/
@@ -66,10 +66,12 @@ h1 {
 .restaurant_explorer {
   border-radius: 20px;
   padding: 10px;
-  background-image:linear-gradient(171deg, $secondary, $primary);
+  border: none;
+  background-image: linear-gradient(171deg, $secondary, $primary);
   color: white;
+  box-shadow: 3px 3px 3px rgb(223, 221, 221);
+  cursor: pointer;
 }
-
 
 /*CHOICE BUTTON*/
 
@@ -77,7 +79,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- 
   width: 90%;
   margin: auto;
   padding: 20px;
@@ -89,6 +90,7 @@ h2 {
 
 .buttons_form {
   display: flex;
+  cursor: pointer;
   background-color: rgb(241, 238, 238);
   width: 90%;
   border-radius: 15px;
@@ -96,10 +98,10 @@ h2 {
   align-items: center;
   margin-top: 10px;
   box-shadow: 3px 3px 3px rgb(223, 221, 221);
-  &:hover {background-color: rgb(229, 213, 233);
+  &:hover {
+    background-color: rgb(229, 213, 233);
   }
 }
-
 
 .number {
   background-color: $primary;
@@ -118,22 +120,41 @@ h2 {
 .icon {
   margin-right: 15px;
   color: gray;
-  &:hover {color: $primary}
 }
 
-.button_name {background: none;
-border: none;
-font-weight: bold;}
+.button_name {
+  background: none;
+  border: none;
+  font-weight: bold;
+}
 
 /*MENUS*/
 
-.link_menus {color:black;}
+.link_menus {
+  color: black;
+}
 
 .menus {
   width: 90%;
   margin: auto;
   padding: 20px;
   background-color: rgb(241, 238, 238);
+}
+
+.image_new {
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  font-weight: bold;
+  z-index: 1;
+  top: 20px;
+  right: 30px;
+  background-color: $tertiary;
+  padding: 5px;
+  border-radius: 5px;
+  color: darken($tertiary, $amount: 40);
 }
 
 .image_menu {
@@ -144,49 +165,58 @@ font-weight: bold;}
   border-top-right-radius: 20px;
 }
 
-.menu_design {display: flex;
-flex-direction: column;
-background-color: white;
-border-radius: 20px;
-margin-top: 20px;
-box-shadow: 3px 3px 3px rgb(228, 226, 226);}
+.menu_design {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 3px rgb(228, 226, 226);
+}
 
-.other_info_and_heart {display: flex;
-align-items: center;
-justify-content: space-between;
-width: 90%;
-margin: auto;}
-
+.other_info_and_heart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
 
 /*FOOTER*/
-footer {background-color: rgb(44, 44, 44);
-color: white;
-padding-top: 10px;
-padding-bottom: 10px;
+footer {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.p_footer {font-family: shrikhand, cursive;
-margin:10px}
-
-.logo_footer {width:35%;
-
+.p_footer {
+  font-family: shrikhand, cursive;
+  margin: 10px;
 }
 
-.icon_footer {display: flex;
-align-items: center;
-width: 70%;
+.logo_footer {
+  width: 35%;
 }
 
-.p_icon {margin: 5px ;
+.icon_footer {
+  display: flex;
+  align-items: center;
+  width: 70%;
 }
 
+.p_icon {
+  margin: 5px;
+}
 
-
-.footer_elements {width: 90%;
+.footer_elements {
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
 
-  a {text-decoration: none;
-  color:white}
+a {
+  text-decoration: none;
+  color: white;
+}
