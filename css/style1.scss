@@ -1,0 +1,147 @@
+/*PROPRIETES GENERALES*/
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: black;
+  width: 100%;
+  margin: 0px;
+}
+
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$backgroundgrey: rgb(241, 238, 238);
+$box: 3px 3px 3px rgb(228,226, 226);
+
+/*HEADER */
+
+header {display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.logo {
+ height:30px;
+}
+
+
+.return {margin-right: 50px;
+border:none;
+background-color: white;
+cursor: pointer;
+}
+
+/*MAIN */
+
+.main {width:100%}
+
+.image_menu {
+    object-fit: cover;
+    width: 100%;
+height: 230px;}
+
+.dishes {box-sizing: border-box;
+    width: 100%;
+   background-color: $backgroundgrey;
+display: flex;
+flex-direction: column;
+padding: 20px;
+margin-top: -30px;
+position: relative;
+z-index: 10;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+
+}
+
+   h1 {
+    font-family: "shrikhand", cursive;
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  h2 {font-size: 20px;
+font-weight:lighter;}
+
+h3 {margin:0;
+padding-bottom: 10px;}
+
+p {margin: 0;}
+
+.title_heart {display: flex;
+justify-content: space-between;}
+
+
+  /*STARTERS */
+
+  .starters {display: flex;
+flex-direction: column;}
+
+.article {background-color: white;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+box-shadow: $box;
+margin-bottom: 10px;
+padding:15px}
+
+.content {display: flex;
+justify-content: space-between;}
+
+
+.parent {width: 100%;
+margin-top: 10px;
+text-align: center;}
+.degrade_button {
+    border-radius: 25px;
+    padding: 15px 40px;
+    border: none;
+    background-image: linear-gradient(171deg, $secondary, $primary);
+    color: white;
+    box-shadow: $box;
+    cursor: pointer;
+    }
+
+  
+
+  /*FOOTER*/
+footer {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .p_footer {
+    font-family: shrikhand, cursive;
+    margin: 10px 0px;
+  }
+ 
+  .icon_footer {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+  
+  .p_icon {
+    margin: 5px;
+  }
+  
+  .footer_elements {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
