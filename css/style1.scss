@@ -32,8 +32,10 @@ header {display: flex;
 
 .return {margin-right: 50px;
 border:none;
+color:black;
 background-color: white;
 cursor: pointer;
+&:hover {opacity: 0.5;}
 }
 
 /*MAIN */
@@ -89,7 +91,12 @@ display: flex;
 flex-direction: column;
 box-shadow: $box;
 margin-bottom: 10px;
-padding:15px}
+padding:15px;
+&:hover {opacity: 0.6;
+    box-shadow:3px 3px 3px rgb(110, 110, 110)}
+}
+
+
 
 .content {display: flex;
 justify-content: space-between;}
@@ -98,6 +105,7 @@ justify-content: space-between;}
 .parent {width: 100%;
 margin-top: 10px;
 text-align: center;}
+
 .degrade_button {
     border-radius: 25px;
     padding: 15px 40px;
@@ -106,7 +114,10 @@ text-align: center;}
     color: white;
     box-shadow: $box;
     cursor: pointer;
+    &:hover {box-shadow:3px 3px 3px rgb(110, 110, 110) ;
+        opacity:0.9}
     }
+
 
   
 
@@ -143,5 +154,6 @@ footer {
   a {
     text-decoration: none;
     color: white;
+    &:hover {color:blue}
   }
   

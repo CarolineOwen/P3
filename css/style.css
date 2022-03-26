@@ -38,7 +38,7 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  border-top: 2px solid #b6b6b6;
+  border-top: 2px solid #c2c1c1;
   -webkit-box-shadow: inset 0px 2px 2px #d3d0d0;
           box-shadow: inset 0px 2px 2px #d3d0d0;
 }
@@ -75,6 +75,12 @@ h1, h2 {
   -webkit-box-shadow: 3px 3px 3px #e4e2e2;
           box-shadow: 3px 3px 3px #e4e2e2;
   cursor: pointer;
+}
+
+.degrade_button:hover {
+  -webkit-box-shadow: 3px 3px 3px #6e6e6e;
+          box-shadow: 3px 3px 3px #6e6e6e;
+  opacity: 0.9;
 }
 
 /*CHOICE BUTTON*/
@@ -208,6 +214,12 @@ main {
           box-shadow: 3px 3px 3px #e4e2e2;
 }
 
+.menu_design:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 3px 3px 3px #6e6e6e;
+          box-shadow: 3px 3px 3px #6e6e6e;
+}
+
 .other_info_and_heart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,5 +276,9 @@ footer {
 a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: blue;
 }
 /*# sourceMappingURL=style.css.map */

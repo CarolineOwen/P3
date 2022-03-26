@@ -39,7 +39,7 @@ header {display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  border-top: 2px solid rgb(182, 182, 182);
+  border-top: 2px solid rgb(194, 193, 193);
   box-shadow: inset 0px 2px 2px rgb(211, 208, 208);
 }
 
@@ -76,6 +76,9 @@ h1, h2 {
   box-shadow: $box;
   cursor: pointer;
 }
+
+.degrade_button:hover {box-shadow:3px 3px 3px rgb(110, 110, 110) ;
+  opacity:0.9}
 
 /*CHOICE BUTTON*/
 
@@ -181,7 +184,10 @@ main {width: 100%;
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: $box;
+  &:hover {opacity: 0.8;
+    box-shadow:3px 3px 3px rgb(110, 110, 110)}
 }
+
 
 .other_info_and_heart {
   display: flex;
@@ -226,4 +232,5 @@ footer {
 a {
   text-decoration: none;
   color: white;
+  &:hover {color:blue}
 }
