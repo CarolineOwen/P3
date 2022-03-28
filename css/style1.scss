@@ -110,7 +110,7 @@ text-align: center;}
     border-radius: 25px;
     padding: 15px 40px;
     border: none;
-    background-image: linear-gradient(171deg, $secondary, $primary);
+    background: linear-gradient(171deg, $secondary, $primary);
     color: white;
     box-shadow: $box;
     cursor: pointer;
@@ -156,4 +156,6 @@ footer {
     color: white;
     &:hover {color:blue}
   }
-  
+
+
+

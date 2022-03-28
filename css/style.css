@@ -60,7 +60,8 @@ header {
   padding: 40px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   font-size: 20px;
   font-weight: bold;
@@ -70,7 +71,7 @@ h1, h2 {
   border-radius: 25px;
   padding: 15px 40px;
   border: none;
-  background-image: linear-gradient(171deg, #ff79da, #9356dc);
+  background: linear-gradient(171deg, #ff79da, #9356dc);
   color: white;
   -webkit-box-shadow: 3px 3px 3px #e4e2e2;
           box-shadow: 3px 3px 3px #e4e2e2;
@@ -165,10 +166,6 @@ main {
   padding: 20px 0px;
 }
 
-.link_menus {
-  color: black;
-}
-
 .menus {
   width: 90%;
   margin: auto;
@@ -220,6 +217,10 @@ main {
           box-shadow: 3px 3px 3px #6e6e6e;
 }
 
+.link_menus {
+  color: black;
+}
+
 .other_info_and_heart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,6 +233,39 @@ main {
           justify-content: space-between;
   width: 90%;
   margin: auto;
+}
+
+/*HEART TRANSITION*/
+.div_heart_relative {
+  position: relative;
+}
+
+.heart1 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: black;
+  font-size: 2rem;
+}
+
+.heart2 {
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: black;
+  font-size: 2rem;
+  left: 0;
+  font-size: 2rem;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  opacity: 0;
+}
+
+.heart2:hover {
+  background-image: linear-gradient(171deg, #ff79da, #9356dc);
+  font-weight: bold;
+  opacity: 1;
 }
 
 /*FOOTER*/
@@ -276,9 +310,5 @@ footer {
 a {
   text-decoration: none;
   color: white;
-}
-
-a:hover {
-  color: blue;
 }
 /*# sourceMappingURL=style.css.map */

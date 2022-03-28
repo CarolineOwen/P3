@@ -9,17 +9,18 @@ html {
   margin: 0px;
 }
 
-
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $backgroundgrey: rgb(241, 238, 238);
-$box: 3px 3px 3px rgb(228,226, 226);
-
+$box: 3px 3px 3px rgb(228, 226, 226);
+$heart-btn-start: $secondary;
+$heart-btn-end: $primary;
 
 /*HEADER*/
 
-header {display: flex;
+header {
+  display: flex;
   justify-content: center;
   width: 90%;
   margin: auto;
@@ -27,12 +28,13 @@ header {display: flex;
 }
 
 .logo {
- height:30px;
+  height: 30px;
 }
 
 /*LOCATION INPUT*/
 
-.belleville {display: flex;
+.belleville {
+  display: flex;
   justify-content: center;
   background-color: rgb(226, 226, 226);
   width: 100%;
@@ -61,7 +63,8 @@ header {display: flex;
   padding: 40px;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   font-size: 20px;
   font-weight: bold;
@@ -71,14 +74,16 @@ h1, h2 {
   border-radius: 25px;
   padding: 15px 40px;
   border: none;
-  background-image: linear-gradient(171deg, $secondary, $primary);
+  background: linear-gradient(171deg, $secondary, $primary);
   color: white;
   box-shadow: $box;
   cursor: pointer;
 }
 
-.degrade_button:hover {box-shadow:3px 3px 3px rgb(110, 110, 110) ;
-  opacity:0.9}
+.degrade_button:hover {
+  box-shadow: 3px 3px 3px rgb(110, 110, 110);
+  opacity: 0.9;
+}
 
 /*CHOICE BUTTON*/
 
@@ -90,7 +95,6 @@ h1, h2 {
   margin: auto;
   padding: 30px 0px;
 }
-
 
 .buttons_form {
   display: flex;
@@ -107,7 +111,6 @@ h1, h2 {
     background-color: rgb(229, 213, 233);
   }
 }
-
 
 .number {
   background-color: $primary;
@@ -128,7 +131,9 @@ h1, h2 {
   color: gray;
 }
 
-.buttons_form:hover i {color:#9356dc}
+.buttons_form:hover i {
+  color: #9356dc;
+}
 
 .button_name {
   background: none;
@@ -138,19 +143,15 @@ h1, h2 {
 
 /*MENUS*/
 
-main {width: 100%;
+main {
+  width: 100%;
   background-color: $backgroundgrey;
-  padding: 20px 0px;}
-
-.link_menus {
-  color: black;
+  padding: 20px 0px;
 }
 
 .menus {
   width: 90%;
   margin: auto;
- 
-  
 }
 
 .image_new {
@@ -184,10 +185,17 @@ main {width: 100%;
   border-radius: 20px;
   margin-top: 20px;
   box-shadow: $box;
-  &:hover {opacity: 0.8;
-    box-shadow:3px 3px 3px rgb(110, 110, 110)}
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgb(110, 110, 110);
+  
+  }
 }
 
+.link_menus {
+ 
+  color: black;
+}
 
 .other_info_and_heart {
   display: flex;
@@ -196,6 +204,36 @@ main {width: 100%;
   width: 90%;
   margin: auto;
 }
+
+/*HEART TRANSITION*/
+
+.div_heart_relative {position:relative;
+}
+
+.heart1 {background-clip: text;
+  -webkit-background-clip: text;
+color: transparent;
+background-color:black;
+font-size: 2rem;
+}
+
+.heart2 {position:absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color:black;
+font-size: 2rem;
+left:0;
+  font-size: 2rem;
+transition-duration: 1s;
+opacity: 0;
+&:hover {background-image: linear-gradient(171deg, $secondary, $primary);
+  font-weight: bold;
+  opacity: 1;}
+}
+
+
+
 
 /*FOOTER*/
 footer {
@@ -209,8 +247,6 @@ footer {
   font-family: "shrikhand", cursive;
   margin: 10px 0px;
 }
-
-
 
 .icon_footer {
   display: flex;
@@ -232,5 +268,4 @@ footer {
 a {
   text-decoration: none;
   color: white;
-  &:hover {color:blue}
 }
