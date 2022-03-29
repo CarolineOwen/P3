@@ -178,7 +178,6 @@ main {
 .new {
   position: absolute;
   font-weight: bold;
-  z-index: 1;
   top: 20px;
   right: 30px;
   background-color: #99e2d0;
@@ -209,9 +208,15 @@ main {
   margin-top: 20px;
   -webkit-box-shadow: 3px 3px 3px #e4e2e2;
           box-shadow: 3px 3px 3px #e4e2e2;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
 }
 
 .menu_design:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
   opacity: 0.8;
   -webkit-box-shadow: 3px 3px 3px #6e6e6e;
           box-shadow: 3px 3px 3px #6e6e6e;
@@ -256,7 +261,6 @@ main {
   background-color: black;
   font-size: 2rem;
   left: 0;
-  font-size: 2rem;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   opacity: 0;

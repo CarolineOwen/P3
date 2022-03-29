@@ -84,6 +84,14 @@ h2 {
   font-weight: lighter;
 }
 
+h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #99e2d0;
+}
+
 h3 {
   margin: 0;
   padding-bottom: 10px;
@@ -102,6 +110,37 @@ p {
           justify-content: space-between;
 }
 
+.div_heart_relative {
+  position: relative;
+}
+
+.heart1 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: black;
+  font-size: 2rem;
+}
+
+.heart2 {
+  position: absolute;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: black;
+  font-size: 2rem;
+  left: 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  opacity: 0;
+}
+
+.heart2:hover {
+  background-image: linear-gradient(171deg, #ff79da, #9356dc);
+  font-weight: bold;
+  opacity: 1;
+}
+
 /*STARTERS */
 .starters {
   display: -webkit-box;
@@ -111,6 +150,46 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: appear 3s;
+          animation: appear 3s;
+}
+
+.main_dishes {
+  opacity: 0;
+  -webkit-animation: appear 3s 2s forwards;
+          animation: appear 3s 2s forwards;
+}
+
+.desserts {
+  opacity: 0;
+  -webkit-animation: appear 3s 4s forwards;
+          animation: appear 3s 4s forwards;
+}
+
+@-webkit-keyframes appear {
+  from {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .article {
@@ -127,9 +206,15 @@ p {
           box-shadow: 3px 3px 3px #e4e2e2;
   margin-bottom: 10px;
   padding: 15px;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
 }
 
 .article:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
   opacity: 0.6;
   -webkit-box-shadow: 3px 3px 3px #6e6e6e;
           box-shadow: 3px 3px 3px #6e6e6e;
