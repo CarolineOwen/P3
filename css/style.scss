@@ -14,6 +14,7 @@ $secondary: #ff79da;
 $tertiary: #99e2d0;
 $backgroundgrey: rgb(241, 238, 238);
 $box: 3px 3px 3px rgb(228, 226, 226);
+$border-top:rgb(194, 193, 193);
 $heart-btn-start: $secondary;
 $heart-btn-end: $primary;
 
@@ -41,8 +42,8 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  border-top: 2px solid rgb(194, 193, 193);
-  box-shadow: inset 0px 2px 2px rgb(211, 208, 208);
+  border-top: 2px solid $border-top;
+  box-shadow: inset 0px 2px 2px darken($border-top, 4);
 }
 
 .location {
@@ -81,8 +82,8 @@ h2 {
 }
 
 .degrade_button:hover {
-  box-shadow: 3px 3px 3px rgb(110, 110, 110);
-  opacity: 0.9;
+  box-shadow: 3px 3px 3px darken($border-top, 15);
+  opacity: 0.8;
 }
 
 /*CHOICE BUTTON*/
@@ -178,6 +179,7 @@ main {
 }
 
 .menu_design {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -207,7 +209,9 @@ main {
 /*HEART TRANSITION*/
 
 .div_heart_relative {
-  position: relative;
+  position: absolute;
+  bottom:30px;
+  right:30px;
 }
 
 .heart1 {
@@ -226,13 +230,21 @@ main {
   background-color: black;
   font-size: 2rem;
   left: 0;
-  transition-duration: 1s;
-  opacity: 0;
-  &:hover {
+  &:active {
+    animation: clic 1s;
+  }
+}
+
+@keyframes clic {
+  from {opacity: 0;
     background-image: linear-gradient(171deg, $secondary, $primary);
     font-weight: bold;
-    opacity: 1;
-    
+
+  }
+  to {opacity: 1;
+    background-image: linear-gradient(171deg, $secondary, $primary);
+    font-weight: bold;
+
   }
 }
 
@@ -270,3 +282,5 @@ a {
   text-decoration: none;
   color: white;
 }
+
+

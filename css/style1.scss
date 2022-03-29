@@ -122,12 +122,13 @@ p {
   left: 0;
   transition-duration: 1s;
   opacity: 0;
-  &:hover {
+  &:active {
     background-image: linear-gradient(171deg, $secondary, $primary);
     font-weight: bold;
     opacity: 1;
   }
 }
+
 
 /*STARTERS */
 

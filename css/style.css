@@ -39,8 +39,8 @@ header {
   padding-bottom: 10px;
   text-align: center;
   border-top: 2px solid #c2c1c1;
-  -webkit-box-shadow: inset 0px 2px 2px #d3d0d0;
-          box-shadow: inset 0px 2px 2px #d3d0d0;
+  -webkit-box-shadow: inset 0px 2px 2px #b8b7b7;
+          box-shadow: inset 0px 2px 2px #b8b7b7;
 }
 
 .location {
@@ -79,9 +79,9 @@ h2 {
 }
 
 .degrade_button:hover {
-  -webkit-box-shadow: 3px 3px 3px #6e6e6e;
-          box-shadow: 3px 3px 3px #6e6e6e;
-  opacity: 0.9;
+  -webkit-box-shadow: 3px 3px 3px #9c9a9a;
+          box-shadow: 3px 3px 3px #9c9a9a;
+  opacity: 0.8;
 }
 
 /*CHOICE BUTTON*/
@@ -196,6 +196,7 @@ main {
 }
 
 .menu_design {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,7 +243,9 @@ main {
 
 /*HEART TRANSITION*/
 .div_heart_relative {
-  position: relative;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 
 .heart1 {
@@ -261,15 +264,37 @@ main {
   background-color: black;
   font-size: 2rem;
   left: 0;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  opacity: 0;
 }
 
-.heart2:hover {
-  background-image: linear-gradient(171deg, #ff79da, #9356dc);
-  font-weight: bold;
-  opacity: 1;
+.heart2:active {
+  -webkit-animation: clic 1s;
+          animation: clic 1s;
+}
+
+@-webkit-keyframes clic {
+  from {
+    opacity: 0;
+    background-image: linear-gradient(171deg, #ff79da, #9356dc);
+    font-weight: bold;
+  }
+  to {
+    opacity: 1;
+    background-image: linear-gradient(171deg, #ff79da, #9356dc);
+    font-weight: bold;
+  }
+}
+
+@keyframes clic {
+  from {
+    opacity: 0;
+    background-image: linear-gradient(171deg, #ff79da, #9356dc);
+    font-weight: bold;
+  }
+  to {
+    opacity: 1;
+    background-image: linear-gradient(171deg, #ff79da, #9356dc);
+    font-weight: bold;
+  }
 }
 
 /*FOOTER*/
