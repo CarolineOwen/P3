@@ -79,7 +79,8 @@ h2 {
   font-weight: lighter;
 }
 
-h2::after {content:'';
+h2::after {
+  content: "";
   display: block;
   width: 50px;
   height: 2px;
@@ -129,7 +130,6 @@ p {
   }
 }
 
-
 /*STARTERS */
 
 .starters {
@@ -138,19 +138,26 @@ p {
   animation: appear 3s;
 }
 
-.main_dishes {opacity: 0;
-  animation: appear 3s 2s forwards;}
-
-  .desserts {opacity: 0;
-    animation: appear 3s 4s forwards;}
-
-@keyframes appear {
-  from {transform: translateY(-200px);
-  opacity:0}
-  to{transform: translateY(0px);
-  opacity:1}
+.main_dishes {
+  opacity: 0;
+  animation: appear 3s 2s forwards;
 }
 
+.desserts {
+  opacity: 0;
+  animation: appear 3s 4s forwards;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
 .article {
   background-color: white;

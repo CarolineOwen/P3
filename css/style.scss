@@ -14,7 +14,7 @@ $secondary: #ff79da;
 $tertiary: #99e2d0;
 $backgroundgrey: rgb(241, 238, 238);
 $box: 3px 3px 3px rgb(228, 226, 226);
-$border-top:rgb(194, 193, 193);
+$border-top: rgb(194, 193, 193);
 $heart-btn-start: $secondary;
 $heart-btn-end: $primary;
 
@@ -210,8 +210,8 @@ main {
 
 .div_heart_relative {
   position: absolute;
-  bottom:30px;
-  right:30px;
+  bottom: 30px;
+  right: 30px;
 }
 
 .heart1 {
@@ -231,20 +231,20 @@ main {
   font-size: 2rem;
   left: 0;
   &:active {
-    animation: clic 1s;
+    animation: clic 2s;
   }
 }
 
 @keyframes clic {
-  from {opacity: 0;
-    background-image: linear-gradient(171deg, $secondary, $primary);
+  from {
+    opacity: 0;
+    background-image: linear-gradient(bottom, $secondary, $primary);
     font-weight: bold;
-
   }
-  to {opacity: 1;
-    background-image: linear-gradient(171deg, $secondary, $primary);
+  to {
+    opacity: 1;
+    background-image: linear-gradient(bottom, $secondary, $primary);
     font-weight: bold;
-
   }
 }
 
@@ -282,5 +282,3 @@ a {
   text-decoration: none;
   color: white;
 }
-
-
