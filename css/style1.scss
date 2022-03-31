@@ -62,7 +62,6 @@ header {
   padding: 20px;
   margin-top: -30px;
   position: relative;
-  z-index: 10;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -90,6 +89,7 @@ h2::after {
 h3 {
   margin: 0;
   padding-bottom: 10px;
+  
 }
 
 p {
@@ -159,7 +159,7 @@ p {
   }
 }
 
-.article {
+.article {position:relative;
   background-color: white;
   border-radius: 20px;
   display: flex;
@@ -167,17 +167,49 @@ p {
   box-shadow: $box;
   margin-bottom: 10px;
   padding: 15px;
-  transition: transform 800ms;
-  &:hover {
-    transform: scale(0.98);
-    opacity: 0.6;
-    box-shadow: 3px 3px 3px rgb(110, 110, 110);
+  transition: all 1s;
+  &:active .check {
+    animation: checkbox 1s forwards;
+  opacity: 1;}
+  &:active .content {
+    animation: content1 1s forwards;
+  }
+  &:active i {transition: transform 800ms;
+    transform: rotate(360deg)}
+}
+
+
+@keyframes checkbox {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+  to {
+    width:70px;
+    opacity: 1;
   }
 }
+
+@keyframes content1 {
+  from {
+    width: 100%;
+  }
+  to {
+    width:80%;
+ 
+  }
+}
+
+p {white-space: nowrap;
+
+overflow-x: hidden;
+text-overflow: ellipsis;}
 
 .content {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  
 }
 
 .parent {
@@ -198,7 +230,23 @@ p {
     box-shadow: 3px 3px 3px rgb(110, 110, 110);
     opacity: 0.9;
   }
+
 }
+
+.check {box-sizing: border-box;
+  font-size:20px ;
+  background-color: $tertiary;
+color: white;
+position: absolute;
+top:0px;
+right:0px;
+padding:30px 0px 30px 25px;
+height:100%;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+opacity: 0;
+}
+
 
 /*FOOTER*/
 footer {

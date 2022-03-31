@@ -67,7 +67,6 @@ header {
   padding: 20px;
   margin-top: -30px;
   position: relative;
-  z-index: 10;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -193,6 +192,7 @@ p {
 }
 
 .article {
+  position: relative;
   background-color: white;
   border-radius: 20px;
   display: -webkit-box;
@@ -206,18 +206,74 @@ p {
           box-shadow: 3px 3px 3px #e4e2e2;
   margin-bottom: 10px;
   padding: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.article:active .check {
+  -webkit-animation: checkbox 1s forwards;
+          animation: checkbox 1s forwards;
+  opacity: 1;
+}
+
+.article:active .content {
+  -webkit-animation: content1 1s forwards;
+          animation: content1 1s forwards;
+}
+
+.article:active i {
   -webkit-transition: -webkit-transform 800ms;
   transition: -webkit-transform 800ms;
   transition: transform 800ms;
   transition: transform 800ms, -webkit-transform 800ms;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
-.article:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-  opacity: 0.6;
-  -webkit-box-shadow: 3px 3px 3px #6e6e6e;
-          box-shadow: 3px 3px 3px #6e6e6e;
+@-webkit-keyframes checkbox {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+  to {
+    width: 70px;
+    opacity: 1;
+  }
+}
+
+@keyframes checkbox {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+  to {
+    width: 70px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes content1 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes content1 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+p {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .content {
@@ -227,6 +283,7 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
 }
 
 .parent {
@@ -250,6 +307,22 @@ p {
   -webkit-box-shadow: 3px 3px 3px #6e6e6e;
           box-shadow: 3px 3px 3px #6e6e6e;
   opacity: 0.9;
+}
+
+.check {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  background-color: #99e2d0;
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 30px 0px 30px 25px;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0;
 }
 
 /*FOOTER*/
