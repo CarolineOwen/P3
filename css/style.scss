@@ -20,7 +20,7 @@ $heart-btn-end: $primary;
 
 /*LOADER*/
 
-.test {
+.div_loader {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -32,13 +32,14 @@ $heart-btn-end: $primary;
 }
 
 .loader {
-  position: fixed;
   top: 50%;
   width: 60px;
   height: 60px;
-  animation: load 4s;
+  animation: load 1s;
   animation-fill-mode: both;
-  text-align: center;
+  border-radius: 50px;
+  border: 6px solid $primary;
+  position: relative;
 }
 
 @keyframes load {
@@ -53,13 +54,7 @@ $heart-btn-end: $primary;
   }
 }
 
-.loader-quart {
-  border-radius: 50px;
-  border: 6px solid $primary;
-  position: relative;
-}
-
-.loader-quart::after {
+.loader::after {
   content: "";
   width: 60px;
   height: 60px;
@@ -83,7 +78,7 @@ $heart-btn-end: $primary;
 
 .globalcontainer {
   opacity: 0;
-  animation: load2 1s linear 4s;
+  animation: load2 1s linear 1s;
   animation-fill-mode: forwards;
 }
 
@@ -127,7 +122,7 @@ header {
   padding-right: 10px;
 }
 
-#search_location {
+.search_location {
   background: none;
   border: none;
   width: 150px;
@@ -144,34 +139,34 @@ header {
 h1,
 h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .degrade_button {
   border-radius: 25px;
   padding: 15px 40px;
+  margin-top: 20px;
   border: none;
   background: linear-gradient(171deg, $secondary, $primary);
   color: white;
   box-shadow: $box;
   cursor: pointer;
-}
-
-.degrade_button:hover {
-  box-shadow: 3px 3px 3px darken($border-top, 15);
-  opacity: 0.8;
+  &:hover {
+    box-shadow: 3px 3px 3px darken($border-top, 15);
+    opacity: 0.8;
+  }
 }
 
 /*CHOICE BUTTON*/
 
+.function {padding: 30px 0px;}
 .buttons {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 90%;
   margin: auto;
-  padding: 30px 0px;
 }
 
 .buttons_form {
@@ -183,10 +178,13 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   margin-top: 15px;
-  padding: 5px 0px;
+  padding: 15px 0px;
   box-shadow: $box;
   &:hover {
-    background-color: rgb(229, 213, 233);
+    background-color: lighten($primary, 30);
+  }
+  &:hover i {
+    color: $primary;
   }
 }
 
@@ -202,6 +200,7 @@ h2 {
   align-items: center;
   margin-left: -5px;
   margin-right: 25px;
+  margin-top:0;
 }
 
 .icon {
@@ -209,17 +208,17 @@ h2 {
   color: gray;
 }
 
-.buttons_form:hover i {
-  color: #9356dc;
-}
-
 .button_name {
   background: none;
   border: none;
   font-weight: bold;
+  margin:0;
 }
 
 /*MENUS*/
+
+h3, p {margin:8px 0px 0px 0px;
+font-size: 15px;}
 
 main {
   width: 100%;
@@ -227,6 +226,7 @@ main {
   padding: 20px 0px;
 }
 
+h2 {margin-left: 30px;}
 .menus {
   width: 90%;
   margin: auto;
@@ -250,7 +250,7 @@ main {
 .image_menu {
   object-fit: cover;
   width: 100%;
-  height: 150px;
+  height: 130px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -273,21 +273,23 @@ main {
 
 .link_menus {
   color: black;
+  margin-bottom:10px;
 }
 
-.other_info_and_heart {
+.other_information {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
   width: 90%;
   margin: auto;
 }
 
 /*HEART TRANSITION*/
 
-.div_heart_relative {
+.div_heart {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 30px;
 }
 
@@ -296,7 +298,7 @@ main {
   -webkit-background-clip: text;
   color: transparent;
   background-color: black;
-  font-size: 2rem;
+  font-size: 25px;
 }
 
 .heart2 {
@@ -305,7 +307,7 @@ main {
   -webkit-background-clip: text;
   color: transparent;
   background-color: black;
-  font-size: 2rem;
+  font-size: 25px;
   left: 0;
   &:active {
     animation: clic 2s;
@@ -333,29 +335,71 @@ footer {
   padding-bottom: 10px;
 }
 
-.p_footer {
-  font-family: "shrikhand", cursive;
-  margin: 10px 0px;
-}
-
-.icon_footer {
-  display: flex;
-  align-items: center;
-  width: 70%;
-}
-
-.p_icon {
-  margin: 5px;
-}
-
 .footer_elements {
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.p_footer {
+  font-family: "shrikhand", cursive;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.icon_footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;  
+}
+.icon_footer p {margin-bottom: 7px;
+margin-left: 5px;}
+
+.p_icon {
+  margin-bottom: 7px;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+/* TABLETTE */
+@media screen and (min-width: 700px) 
+{.function h2 {text-align: center;
+margin-left: 0;}
+
+  .buttons {width: 40%;}
+
+  .menus {display: flex;
+  flex-wrap: wrap;
+justify-content: space-around;}
+
+  .menu_design {width: 40%;}
+
+main h2 {text-align: center;
+margin-left:0;}
+
+.footer_elements {flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px)
+{
+  .menu_design{width:20%}
+  .menus {width: 98%;}
+
+  .buttons {flex-direction: row;
+    justify-content: space-around;
+  width:90%;}
+  .buttons_form {width: 30%;}
+  .heart2:hover {
+    animation: clic 2s;
+  }
 }

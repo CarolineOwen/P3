@@ -9,7 +9,7 @@ html {
 }
 
 /*LOADER*/
-.test {
+.div_loader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,15 +25,16 @@ html {
 }
 
 .loader {
-  position: fixed;
   top: 50%;
   width: 60px;
   height: 60px;
-  -webkit-animation: load 4s;
-          animation: load 4s;
+  -webkit-animation: load 1s;
+          animation: load 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  text-align: center;
+  border-radius: 50px;
+  border: 6px solid #9356dc;
+  position: relative;
 }
 
 @-webkit-keyframes load {
@@ -60,13 +61,7 @@ html {
   }
 }
 
-.loader-quart {
-  border-radius: 50px;
-  border: 6px solid #9356dc;
-  position: relative;
-}
-
-.loader-quart::after {
+.loader::after {
   content: "";
   width: 60px;
   height: 60px;
@@ -104,8 +99,8 @@ html {
 
 .globalcontainer {
   opacity: 0;
-  -webkit-animation: load2 1s linear 4s;
-          animation: load2 1s linear 4s;
+  -webkit-animation: load2 1s linear 1s;
+          animation: load2 1s linear 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -167,7 +162,7 @@ header {
   padding-right: 10px;
 }
 
-#search_location {
+.search_location {
   background: none;
   border: none;
   width: 150px;
@@ -183,13 +178,14 @@ header {
 h1,
 h2 {
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .degrade_button {
   border-radius: 25px;
   padding: 15px 40px;
+  margin-top: 20px;
   border: none;
   background: linear-gradient(171deg, #ff79da, #9356dc);
   color: white;
@@ -205,6 +201,10 @@ h2 {
 }
 
 /*CHOICE BUTTON*/
+.function {
+  padding: 30px 0px;
+}
+
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +217,6 @@ h2 {
       justify-content: space-around;
   width: 90%;
   margin: auto;
-  padding: 30px 0px;
 }
 
 .buttons_form {
@@ -235,13 +234,17 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 15px;
-  padding: 5px 0px;
+  padding: 15px 0px;
   -webkit-box-shadow: 3px 3px 3px #e4e2e2;
           box-shadow: 3px 3px 3px #e4e2e2;
 }
 
 .buttons_form:hover {
-  background-color: #e5d5e9;
+  background-color: #e4d5f6;
+}
+
+.buttons_form:hover i {
+  color: #9356dc;
 }
 
 .number {
@@ -262,6 +265,7 @@ h2 {
           align-items: center;
   margin-left: -5px;
   margin-right: 25px;
+  margin-top: 0;
 }
 
 .icon {
@@ -269,21 +273,27 @@ h2 {
   color: gray;
 }
 
-.buttons_form:hover i {
-  color: #9356dc;
-}
-
 .button_name {
   background: none;
   border: none;
   font-weight: bold;
+  margin: 0;
 }
 
 /*MENUS*/
+h3, p {
+  margin: 8px 0px 0px 0px;
+  font-size: 15px;
+}
+
 main {
   width: 100%;
   background-color: #f1eeee;
   padding: 20px 0px;
+}
+
+h2 {
+  margin-left: 30px;
 }
 
 .menus {
@@ -310,7 +320,7 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 150px;
+  height: 130px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -345,26 +355,30 @@ main {
 
 .link_menus {
   color: black;
+  margin-bottom: 10px;
 }
 
-.other_info_and_heart {
+.other_information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 90%;
   margin: auto;
 }
 
 /*HEART TRANSITION*/
-.div_heart_relative {
+.div_heart {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 30px;
 }
 
@@ -373,7 +387,7 @@ main {
   -webkit-background-clip: text;
   color: transparent;
   background-color: black;
-  font-size: 2rem;
+  font-size: 25px;
 }
 
 .heart2 {
@@ -382,7 +396,7 @@ main {
   -webkit-background-clip: text;
   color: transparent;
   background-color: black;
-  font-size: 2rem;
+  font-size: 25px;
   left: 0;
 }
 
@@ -429,25 +443,6 @@ footer {
   padding-bottom: 10px;
 }
 
-.p_footer {
-  font-family: "shrikhand", cursive;
-  margin: 10px 0px;
-}
-
-.icon_footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70%;
-}
-
-.p_icon {
-  margin: 5px;
-}
-
 .footer_elements {
   width: 90%;
   margin: auto;
@@ -458,10 +453,103 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.p_footer {
+  font-family: "shrikhand", cursive;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.icon_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon_footer p {
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
+.p_icon {
+  margin-bottom: 7px;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+/* TABLETTE */
+@media screen and (min-width: 700px) {
+  .function h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .buttons {
+    width: 40%;
+  }
+  .menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu_design {
+    width: 40%;
+  }
+  main h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .footer_elements {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu_design {
+    width: 20%;
+  }
+  .menus {
+    width: 98%;
+  }
+  .buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 90%;
+  }
+  .buttons_form {
+    width: 30%;
+  }
+  .heart2:hover {
+    -webkit-animation: clic 2s;
+            animation: clic 2s;
+  }
 }
 /*# sourceMappingURL=style.css.map */
