@@ -35,7 +35,7 @@ $heart-btn-end: $primary;
   top: 50%;
   width: 60px;
   height: 60px;
-  animation: load 1s;
+  animation: load 4s;
   animation-fill-mode: both;
   border-radius: 50px;
   border: 6px solid $primary;
@@ -78,7 +78,7 @@ $heart-btn-end: $primary;
 
 .globalcontainer {
   opacity: 0;
-  animation: load2 1s linear 1s;
+  animation: load2 1s linear 4s;
   animation-fill-mode: forwards;
 }
 
@@ -160,7 +160,9 @@ h2 {
 
 /*CHOICE BUTTON*/
 
-.function {padding: 30px 0px;}
+.function {
+  padding: 30px 0px;
+}
 .buttons {
   display: flex;
   flex-direction: column;
@@ -200,7 +202,7 @@ h2 {
   align-items: center;
   margin-left: -5px;
   margin-right: 25px;
-  margin-top:0;
+  margin-top: 0;
 }
 
 .icon {
@@ -212,21 +214,26 @@ h2 {
   background: none;
   border: none;
   font-weight: bold;
-  margin:0;
+  margin: 0;
 }
 
 /*MENUS*/
 
-h3, p {margin:8px 0px 0px 0px;
-font-size: 15px;}
+h3,
+p {
+  margin: 8px 0px 0px 0px;
+  font-size: 15px;
+}
 
-main {
+.section_menus {
   width: 100%;
   background-color: $backgroundgrey;
   padding: 20px 0px;
 }
 
-h2 {margin-left: 30px;}
+h2 {
+  margin-left: 30px;
+}
 .menus {
   width: 90%;
   margin: auto;
@@ -273,7 +280,7 @@ h2 {margin-left: 30px;}
 
 .link_menus {
   color: black;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .other_information {
@@ -299,6 +306,7 @@ h2 {margin-left: 30px;}
   color: transparent;
   background-color: black;
   font-size: 25px;
+  padding: 2px;
 }
 
 .heart2 {
@@ -309,6 +317,7 @@ h2 {margin-left: 30px;}
   background-color: black;
   font-size: 25px;
   left: 0;
+  padding: 2px;
   &:active {
     animation: clic 2s;
   }
@@ -317,12 +326,12 @@ h2 {margin-left: 30px;}
 @keyframes clic {
   from {
     opacity: 0;
-    background-image: linear-gradient(bottom, $secondary, $primary);
+    background-image: linear-gradient(to bottom, $secondary, $primary);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: linear-gradient(bottom, $secondary, $primary);
+    background-image: linear-gradient(to bottom, $secondary, $primary);
     font-weight: bold;
   }
 }
@@ -341,7 +350,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  
 }
 
 .p_footer {
@@ -353,10 +361,12 @@ footer {
 .icon_footer {
   display: flex;
   justify-content: flex-start;
-  align-items: center;  
+  align-items: center;
 }
-.icon_footer p {margin-bottom: 7px;
-margin-left: 5px;}
+.icon_footer p {
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
 
 .p_icon {
   margin-bottom: 7px;
@@ -367,39 +377,58 @@ a {
   color: white;
 }
 
-/* TABLETTE */
-@media screen and (min-width: 700px) 
-{.function h2 {text-align: center;
-margin-left: 0;}
-
-  .buttons {width: 40%;}
-
-  .menus {display: flex;
-  flex-wrap: wrap;
-justify-content: space-around;}
-
-  .menu_design {width: 40%;}
-
-main h2 {text-align: center;
-margin-left:0;}
-
-.footer_elements {flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+/* MEDIA QUERRIES */
+@media screen and (min-width: 700px) {
+  .function h2 {
+    text-align: center;
+    margin-left: 0;
   }
 
-}
+  .buttons {
+    width: 40%;
+  }
 
-@media screen and (min-width: 1024px) and (max-width: 1600px)
-{
-  .menu_design{width:20%}
-  .menus {width: 98%;}
-
-  .buttons {flex-direction: row;
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-  width:90%;}
-  .buttons_form {width: 30%;}
+  }
+
+  .menu_design {
+    width: 40%;
+  }
+
+  .section_menus h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer_elements {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   .heart2:hover {
     animation: clic 2s;
   }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .menu_design {
+    width: 20%;
+  }
+  .menus {
+    width: 98%;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+  }
+  .buttons_form {
+    width: 30%;
+  }
+ 
 }

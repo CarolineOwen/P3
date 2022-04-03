@@ -28,8 +28,8 @@ html {
   top: 50%;
   width: 60px;
   height: 60px;
-  -webkit-animation: load 1s;
-          animation: load 1s;
+  -webkit-animation: load 4s;
+          animation: load 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   border-radius: 50px;
@@ -99,8 +99,8 @@ html {
 
 .globalcontainer {
   opacity: 0;
-  -webkit-animation: load2 1s linear 1s;
-          animation: load2 1s linear 1s;
+  -webkit-animation: load2 1s linear 4s;
+          animation: load2 1s linear 4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -281,12 +281,13 @@ h2 {
 }
 
 /*MENUS*/
-h3, p {
+h3,
+p {
   margin: 8px 0px 0px 0px;
   font-size: 15px;
 }
 
-main {
+.section_menus {
   width: 100%;
   background-color: #f1eeee;
   padding: 20px 0px;
@@ -388,6 +389,7 @@ h2 {
   color: transparent;
   background-color: black;
   font-size: 25px;
+  padding: 2px;
 }
 
 .heart2 {
@@ -398,6 +400,7 @@ h2 {
   background-color: black;
   font-size: 25px;
   left: 0;
+  padding: 2px;
 }
 
 .heart2:active {
@@ -408,14 +411,14 @@ h2 {
 @-webkit-keyframes clic {
   from {
     opacity: 0;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(bottom, #ff79da, #9356dc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(bottom, #ff79da, #9356dc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
 }
@@ -423,14 +426,14 @@ h2 {
 @keyframes clic {
   from {
     opacity: 0;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(bottom, #ff79da, #9356dc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(bottom, #ff79da, #9356dc);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
 }
@@ -490,7 +493,7 @@ a {
   color: white;
 }
 
-/* TABLETTE */
+/* MEDIA QUERRIES */
 @media screen and (min-width: 700px) {
   .function h2 {
     text-align: center;
@@ -511,7 +514,7 @@ a {
   .menu_design {
     width: 40%;
   }
-  main h2 {
+  .section_menus h2 {
     text-align: center;
     margin-left: 0;
   }
@@ -525,6 +528,10 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .heart2:hover {
+    -webkit-animation: clic 2s;
+            animation: clic 2s;
   }
 }
 
@@ -546,10 +553,6 @@ a {
   }
   .buttons_form {
     width: 30%;
-  }
-  .heart2:hover {
-    -webkit-animation: clic 2s;
-            animation: clic 2s;
   }
 }
 /*# sourceMappingURL=style.css.map */

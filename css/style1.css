@@ -114,6 +114,7 @@ p {
 }
 
 .heart1 {
+  padding: 2px;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -122,6 +123,7 @@ p {
 }
 
 .heart2 {
+  padding: 2px;
   position: absolute;
   background-clip: text;
   -webkit-background-clip: text;
@@ -154,12 +156,26 @@ p {
 }
 
 .main_dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   opacity: 0;
   -webkit-animation: appear 3s 2s forwards;
           animation: appear 3s 2s forwards;
 }
 
 .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   opacity: 0;
   -webkit-animation: appear 3s 4s forwards;
           animation: appear 3s 4s forwards;
@@ -232,22 +248,22 @@ p {
 
 @-webkit-keyframes checkbox {
   from {
-    width: 0px;
+    width: 0%;
     opacity: 0;
   }
   to {
-    width: 70px;
+    width: 20%;
     opacity: 1;
   }
 }
 
 @keyframes checkbox {
   from {
-    width: 0px;
+    width: 0%;
     opacity: 0;
   }
   to {
-    width: 70px;
+    width: 20%;
     opacity: 1;
   }
 }
@@ -333,25 +349,6 @@ footer {
   padding-bottom: 10px;
 }
 
-.p_footer {
-  font-family: shrikhand, cursive;
-  margin: 10px 0px;
-}
-
-.icon_footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70%;
-}
-
-.p_icon {
-  margin: 5px;
-}
-
 .footer_elements {
   width: 90%;
   margin: auto;
@@ -362,6 +359,36 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.p_footer {
+  font-family: "shrikhand", cursive;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.icon_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon_footer p {
+  margin-bottom: 7px;
+  margin-left: 5px;
+}
+
+.p_icon {
+  margin-bottom: 7px;
 }
 
 a {
@@ -369,7 +396,127 @@ a {
   color: white;
 }
 
-a:hover {
-  color: blue;
+/*MEDIA QUERRIES*/
+@media screen and (min-width: 700px) {
+  .footer_elements {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .title_heart {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .div_heart_relative {
+    margin-left: 30px;
+  }
+  .article {
+    width: 50%;
+  }
+  .starters,
+  .main_dishes,
+  .desserts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .heart2:hover {
+    background-image: linear-gradient(171deg, #ff79da, #9356dc);
+    font-weight: bold;
+    opacity: 1;
+  }
+  @-webkit-keyframes checkbox {
+    from {
+      width: 0%;
+      opacity: 0;
+    }
+    to {
+      width: 15%;
+      opacity: 1;
+    }
+  }
+  @keyframes checkbox {
+    from {
+      width: 0%;
+      opacity: 0;
+    }
+    to {
+      width: 15%;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes content1 {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 85%;
+    }
+  }
+  @keyframes content1 {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 85%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
+  .article {
+    width: 60%;
+  }
+  @-webkit-keyframes checkbox {
+    from {
+      width: 0%;
+      opacity: 0;
+    }
+    to {
+      width: 10%;
+      opacity: 1;
+    }
+  }
+  @keyframes checkbox {
+    from {
+      width: 0%;
+      opacity: 0;
+    }
+    to {
+      width: 10%;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes content1 {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  @keyframes content1 {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 90%;
+    }
+  }
 }
 /*# sourceMappingURL=style1.css.map */
