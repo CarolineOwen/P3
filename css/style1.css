@@ -16,6 +16,9 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -94,10 +97,9 @@ h2::after {
 h3 {
   margin: 0;
   padding-bottom: 10px;
-}
-
-p {
-  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .title_heart {
@@ -143,6 +145,19 @@ p {
 }
 
 /*STARTERS */
+.bold {
+  font-weight: bold;
+}
+
+.parent_bold {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .starters {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,6 +302,7 @@ p {
 }
 
 p {
+  margin: 0;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -296,6 +312,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -368,6 +388,7 @@ footer {
   font-family: "shrikhand", cursive;
   font-size: 20px;
   margin-bottom: 7px;
+  overflow-x: visible;
 }
 
 .icon_footer {
