@@ -24,6 +24,14 @@ html {
   right: 0px;
 }
 
+.mix {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  color: #99e2d0;
+  font-size: 30px;
+}
+
 .loader {
   top: 50%;
   width: 60px;
@@ -493,7 +501,8 @@ a {
   color: white;
 }
 
-/* MEDIA QUERRIES */
+/* MEDIA QUERRIES 
+TABLETTE*/
 @media screen and (min-width: 700px) {
   .function h2 {
     text-align: center;
@@ -535,6 +544,8 @@ a {
   }
 }
 
+/*MEDIA QUERRIES
+DESKTOP*/
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
   .menu_design {
     width: 20%;

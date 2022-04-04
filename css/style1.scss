@@ -95,7 +95,6 @@ h3 {
   text-overflow: ellipsis;
 }
 
-
 .title_heart {
   display: flex;
   justify-content: space-between;
@@ -134,11 +133,14 @@ h3 {
 
 /*STARTERS */
 
-.bold {font-weight: bold;
+.bold {
+  font-weight: bold;
 }
 
-.parent_bold {display: flex;
-justify-content: space-between;}
+.parent_bold {
+  display: flex;
+  justify-content: space-between;
+}
 
 .starters {
   display: flex;
@@ -214,7 +216,8 @@ justify-content: space-between;}
   }
 }
 
-p {margin: 0;
+p {
+  margin: 0;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -282,7 +285,7 @@ footer {
   font-family: "shrikhand", cursive;
   font-size: 20px;
   margin-bottom: 7px;
-  overflow-x:visible ;
+  overflow-x: visible;
 }
 
 .icon_footer {
@@ -304,13 +307,18 @@ a {
   color: white;
 }
 
-/*MEDIA QUERRIES*/
+/*MEDIA QUERRIES
+TABLETTE*/
 
 @media screen and (min-width: 700px) {
   .footer_elements {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .footer_elements p {
+    margin-bottom: 0;
   }
 
   header {
@@ -358,7 +366,12 @@ a {
       width: 85%;
     }
   }
+  
 }
+
+/*MEDIA QUERRIES
+DESKTOP*/
+
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
   .article {
     width: 60%;
