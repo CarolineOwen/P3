@@ -9,6 +9,8 @@ html {
   margin: 0px;
 }
 
+/*VARIABLES*/
+
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
@@ -18,16 +20,13 @@ $box: 3px 3px 3px rgb(228, 226, 226);
   background: linear-gradient(171deg, $secondary, $primary);
 }
 
-
-
 /*HEADER */
 
 header {
   display: flex;
-  justify-content: flex-start;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 70%;
   margin: auto;
   padding: 10px;
 }
@@ -37,7 +36,7 @@ header {
 }
 
 .return {
-  margin-right: 50px;
+  padding-right: 30px;
   border: none;
   color: black;
   background-color: white;
@@ -92,14 +91,6 @@ h2::after {
   background-color: $tertiary;
 }
 
-h3 {
-  margin: 0;
-  padding-bottom: 10px;
-  white-space: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-}
-
 .title_heart {
   display: flex;
   justify-content: space-between;
@@ -129,22 +120,22 @@ h3 {
   left: 0;
   transition-duration: 1s;
   opacity: 0;
-  &:active {
-    background-image: linear-gradient(171deg, $secondary, $primary);
+  background-image: linear-gradient(171deg, $secondary, $primary);
+  &:hover {
     font-weight: bold;
     opacity: 1;
   }
 }
 
-/*STARTERS */
-
-.bold {
-  font-weight: bold;
-}
+/*STARTERS DISHES DESSERTS */
 
 .parent_bold {
   display: flex;
   justify-content: space-between;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .starters {
@@ -187,16 +178,14 @@ h3 {
   box-shadow: $box;
   margin-bottom: 10px;
   padding: 15px;
-  transition: all 1s;
-  &:active .check {
-    animation: checkbox 1s forwards;
-    opacity: 1;
+  &:hover .check {
+    animation: checkbox 500ms forwards;
   }
-  &:active .content {
-    animation: content1 1s forwards;
+  &:hover .content {
+    animation: content1 500ms forwards;
   }
-  &:active i {
-    transition: transform 800ms;
+  &:hover i {
+    transition: transform 500ms;
     transform: rotate(360deg);
   }
 }
@@ -221,8 +210,30 @@ h3 {
   }
 }
 
+.check {
+  box-sizing: border-box;
+  font-size: 20px;
+  background-color: $tertiary;
+  color: white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 30px 0px 30px 25px;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0;
+}
 p {
   margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: 10px;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -235,7 +246,9 @@ p {
   width: 100%;
 }
 
-.parent {
+/*DEGRADE BUTTON */
+
+.order {
   width: 100%;
   margin-top: 10px;
   text-align: center;
@@ -255,21 +268,6 @@ p {
   }
 }
 
-.check {
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: $tertiary;
-  color: white;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 30px 0px 30px 25px;
-  height: 100%;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  opacity: 0;
-}
-
 /*FOOTER*/
 footer {
   background-color: rgb(44, 44, 44);
@@ -283,13 +281,12 @@ footer {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
-.p_footer {
+.logo_footer {
   font-family: "shrikhand", cursive;
   font-size: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   overflow-x: visible;
 }
 
@@ -297,14 +294,16 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 10px;
 }
 .icon_footer p {
-  margin-bottom: 7px;
+  margin-bottom: 0px;
   margin-left: 5px;
+  overflow-x: visible;
 }
 
-.p_icon {
-  margin-bottom: 7px;
+.p2 {
+  margin-bottom: 10px;
 }
 
 a {
@@ -321,13 +320,6 @@ a {
     align-items: center;
   }
 
-  .footer_elements p {
-    margin-bottom: 0;
-  }
-
-  header {
-    justify-content: center;
-  }
   .title_heart {
     justify-content: center;
     align-items: center;
@@ -343,24 +335,6 @@ a {
   .main_dishes,
   .desserts {
     align-items: center;
-  }
-
-  .heart2:hover {
-    background-image: linear-gradient(171deg, $secondary, $primary);
-    font-weight: bold;
-    opacity: 1;
-  }
-
-  .article:hover .check {
-    animation: checkbox 1s forwards;
-    opacity: 1;
-  }
-  .article:hover .content {
-    animation: content1 1s forwards;
-  }
-  .article:hover i {
-    transition: transform 800ms;
-    transform: rotate(360deg);
   }
 
   @keyframes checkbox {
@@ -389,6 +363,7 @@ a {
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
   .article {
     width: 60%;
+    max-width: 600px;
   }
 
   @keyframes checkbox {

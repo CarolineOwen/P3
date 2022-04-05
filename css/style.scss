@@ -9,6 +9,8 @@ html {
   margin: 0px;
 }
 
+/*VARIABLES*/
+
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
@@ -32,7 +34,7 @@ $border-top: rgb(194, 193, 193);
   right: 0px;
 }
 
-.mix {
+.mixeur {
   position: absolute;
   top: 25%;
   right: 25%;
@@ -99,6 +101,7 @@ $border-top: rgb(194, 193, 193);
     opacity: 1;
   }
 }
+
 /*HEADER*/
 
 header {
@@ -283,7 +286,6 @@ h2 {
   &:hover {
     transform: scale(0.98);
     opacity: 0.8;
-    box-shadow: 3px 3px 3px rgb(110, 110, 110);
   }
 }
 
@@ -327,20 +329,20 @@ h2 {
   font-size: 25px;
   left: 0;
   padding: 2px;
-  &:active {
-    animation: clic 2s;
+  background-image: linear-gradient(to bottom, $secondary, $primary);
+  opacity: 0;
+  &:hover {
+    animation: clic 1s forwards;
   }
 }
 
 @keyframes clic {
   from {
     opacity: 0;
-    background-image: linear-gradient(to bottom, $secondary, $primary);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: linear-gradient(to bottom, $secondary, $primary);
     font-weight: bold;
   }
 }
@@ -417,10 +419,6 @@ TABLETTE*/
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-  }
-
-  .heart2:hover {
-    animation: clic 2s;
   }
 }
 

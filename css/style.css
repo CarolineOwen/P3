@@ -8,6 +8,7 @@ html {
   margin: 0px;
 }
 
+/*VARIABLES*/
 /*LOADER*/
 .div_loader {
   display: -webkit-box;
@@ -24,7 +25,7 @@ html {
   right: 0px;
 }
 
-.mix {
+.mixeur {
   position: absolute;
   top: 25%;
   right: 25%;
@@ -358,8 +359,6 @@ h2 {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
   opacity: 0.8;
-  -webkit-box-shadow: 3px 3px 3px #6e6e6e;
-          box-shadow: 3px 3px 3px #6e6e6e;
 }
 
 .link_menus {
@@ -409,24 +408,23 @@ h2 {
   font-size: 25px;
   left: 0;
   padding: 2px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  opacity: 0;
 }
 
-.heart2:active {
-  -webkit-animation: clic 2s;
-          animation: clic 2s;
+.heart2:hover {
+  -webkit-animation: clic 1s forwards;
+          animation: clic 1s forwards;
 }
 
 @-webkit-keyframes clic {
   from {
     opacity: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
 }
@@ -434,14 +432,10 @@ h2 {
 @keyframes clic {
   from {
     opacity: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
   to {
     opacity: 1;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-    background-image: linear-gradient(to bottom, #ff79da, #9356dc);
     font-weight: bold;
   }
 }
@@ -537,10 +531,6 @@ TABLETTE*/
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .heart2:hover {
-    -webkit-animation: clic 2s;
-            animation: clic 2s;
   }
 }
 
