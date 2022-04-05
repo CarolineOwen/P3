@@ -469,7 +469,7 @@ footer {
           justify-content: flex-start;
 }
 
-.p_footer {
+.footer_elements .footer_elements__plogo {
   font-family: "shrikhand", cursive;
   font-size: 20px;
   margin-bottom: 7px;

@@ -15,8 +15,9 @@ $tertiary: #99e2d0;
 $backgroundgrey: rgb(241, 238, 238);
 $box: 3px 3px 3px rgb(228, 226, 226);
 $border-top: rgb(194, 193, 193);
-$heart-btn-start: $secondary;
-$heart-btn-end: $primary;
+@mixin degrade_color {
+  background: linear-gradient(171deg, $secondary, $primary);
+}
 
 /*LOADER*/
 
@@ -31,11 +32,13 @@ $heart-btn-end: $primary;
   right: 0px;
 }
 
-.mix {position: absolute;
-  top:25%;
+.mix {
+  position: absolute;
+  top: 25%;
   right: 25%;
-color: $tertiary;
-font-size: 30px;}
+  color: $tertiary;
+  font-size: 30px;
+}
 
 .loader {
   top: 50%;
@@ -154,7 +157,7 @@ h2 {
   padding: 15px 40px;
   margin-top: 20px;
   border: none;
-  background: linear-gradient(171deg, $secondary, $primary);
+  @include degrade_color;
   color: white;
   box-shadow: $box;
   cursor: pointer;
@@ -356,12 +359,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.p_footer {
-  font-family: "shrikhand", cursive;
-  font-size: 20px;
-  margin-bottom: 7px;
+  .footer_elements__plogo {
+    font-family: "shrikhand", cursive;
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
 }
 
 .icon_footer {

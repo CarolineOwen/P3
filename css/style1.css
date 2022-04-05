@@ -417,8 +417,7 @@ a {
   color: white;
 }
 
-/*MEDIA QUERRIES
-TABLETTE*/
+/*MEDIA QUERRIES TABLETTE*/
 @media screen and (min-width: 700px) {
   .footer_elements {
     -webkit-box-orient: horizontal;
@@ -465,6 +464,23 @@ TABLETTE*/
     font-weight: bold;
     opacity: 1;
   }
+  .article:hover .check {
+    -webkit-animation: checkbox 1s forwards;
+            animation: checkbox 1s forwards;
+    opacity: 1;
+  }
+  .article:hover .content {
+    -webkit-animation: content1 1s forwards;
+            animation: content1 1s forwards;
+  }
+  .article:hover i {
+    -webkit-transition: -webkit-transform 800ms;
+    transition: -webkit-transform 800ms;
+    transition: transform 800ms;
+    transition: transform 800ms, -webkit-transform 800ms;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
   @-webkit-keyframes checkbox {
     from {
       width: 0%;
@@ -503,8 +519,7 @@ TABLETTE*/
   }
 }
 
-/*MEDIA QUERRIES
-DESKTOP*/
+/*MEDIA QUERRIES DESKTOP*/
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
   .article {
     width: 60%;
