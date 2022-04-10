@@ -179,36 +179,18 @@ h2::after {
   margin-bottom: 10px;
   padding: 15px;
   &:hover .check {
-    animation: checkbox 500ms forwards;
+    width: 20%;
+    opacity: 1;
   }
   &:hover .content {
-    animation: content1 500ms forwards;
+    width: 80%;
   }
   &:hover i {
-    transition: transform 500ms;
+    transition: transform 800ms;
     transform: rotate(360deg);
   }
 }
 
-@keyframes checkbox {
-  from {
-    width: 0%;
-    opacity: 0;
-  }
-  to {
-    width: 20%;
-    opacity: 1;
-  }
-}
-
-@keyframes content1 {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
 
 .check {
   box-sizing: border-box;
@@ -216,13 +198,15 @@ h2::after {
   background-color: $tertiary;
   color: white;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   padding: 30px 0px 30px 25px;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  width:0%;
   opacity: 0;
+  transition: all 700ms ease;
 }
 p {
   margin: 0;
@@ -244,6 +228,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  transition: all 700ms ease;
 }
 
 /*DEGRADE BUTTON */
@@ -337,27 +322,17 @@ a {
     align-items: center;
   }
 
-  @keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
+
+    .article:hover .check {
       width: 15%;
       opacity: 1;
     }
-  }
-
-  @keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
+    .article:hover .content {
       width: 85%;
     }
+   
   }
-}
-
+ 
 /*MEDIA QUERRIES DESKTOP*/
 
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
@@ -366,23 +341,14 @@ a {
     max-width: 600px;
   }
 
-  @keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 10%;
-      opacity: 1;
-    }
+  
+  .article:hover .check {
+    width: 10%;
+    opacity: 1;
+  }
+  .article:hover .content {
+    width: 90%;
+  }
   }
 
-  @keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 90%;
-    }
-  }
-}
+

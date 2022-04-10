@@ -230,62 +230,21 @@ h2::after {
 }
 
 .article:hover .check {
-  -webkit-animation: checkbox 500ms forwards;
-          animation: checkbox 500ms forwards;
+  width: 20%;
+  opacity: 1;
 }
 
 .article:hover .content {
-  -webkit-animation: content1 500ms forwards;
-          animation: content1 500ms forwards;
+  width: 80%;
 }
 
 .article:hover i {
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: -webkit-transform 800ms;
+  transition: -webkit-transform 800ms;
+  transition: transform 800ms;
+  transition: transform 800ms, -webkit-transform 800ms;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-}
-
-@-webkit-keyframes checkbox {
-  from {
-    width: 0%;
-    opacity: 0;
-  }
-  to {
-    width: 20%;
-    opacity: 1;
-  }
-}
-
-@keyframes checkbox {
-  from {
-    width: 0%;
-    opacity: 0;
-  }
-  to {
-    width: 20%;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes content1 {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
-}
-
-@keyframes content1 {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 80%;
-  }
 }
 
 .check {
@@ -295,13 +254,16 @@ h2::after {
   background-color: #99e2d0;
   color: white;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   padding: 30px 0px 30px 25px;
   height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  width: 0%;
   opacity: 0;
+  -webkit-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 
 p {
@@ -331,6 +293,8 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  -webkit-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
 
 /*DEGRADE BUTTON */
@@ -446,41 +410,12 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  @-webkit-keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 15%;
-      opacity: 1;
-    }
+  .article:hover .check {
+    width: 15%;
+    opacity: 1;
   }
-  @keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 15%;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 85%;
-    }
-  }
-  @keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 85%;
-    }
+  .article:hover .content {
+    width: 85%;
   }
 }
 
@@ -490,41 +425,12 @@ a {
     width: 60%;
     max-width: 600px;
   }
-  @-webkit-keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 10%;
-      opacity: 1;
-    }
+  .article:hover .check {
+    width: 10%;
+    opacity: 1;
   }
-  @keyframes checkbox {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 10%;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 90%;
-    }
-  }
-  @keyframes content1 {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 90%;
-    }
+  .article:hover .content {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style1.css.map */
