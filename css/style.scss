@@ -283,7 +283,7 @@ h2 {
   margin-top: 20px;
   box-shadow: $box;
   transition: transform 800ms;
-  &:hover {
+  &:active {
     transform: scale(0.98);
     opacity: 0.8;
   }
